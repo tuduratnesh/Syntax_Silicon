@@ -29,15 +29,12 @@ const Signup = () => {
       return;
     }
 
-    // Save new user
-    localStorage.setItem(
-      "user",
-      JSON.stringify({ name, email, password }) // Store password too
-    );
-  
+    localStorage.setItem("username", name);
+    localStorage.setItem("email", email);
+    
 
     // Redirect to login page after successful signup
-    navigate("/login");
+    navigate("/");
   };
 
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Outlet} from "react-router-dom"
+import {Outlet, useLocation} from "react-router-dom"
 import Footer from './Components/Footer'
 import Navbar from './Components/Navbar'
 import Rightside from './Components/Rightside';
@@ -8,6 +8,15 @@ import Home from './Components/Home';
 
 
 function Layout() {
+  const location = useLocation();
+  const hideLayoutPaths = ['/signup', '/login'];
+
+  const shouldHideLayout = hideLayoutPaths.includes(location.pathname);
+
+  if (shouldHideLayout) {
+    return <Outlet />;
+  }
+
   return (
     <div className="w-full h-screen overflow-hidden flex flex-col">
       <Navbar />
