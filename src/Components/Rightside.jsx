@@ -59,7 +59,7 @@ function Rightside() {
                 ${
                   isActive(link.path)
                     ? 'bg-blue-800 text-white'
-                    : 'text-white  hover:text-white'
+                    : 'text-white hover:bg-blue-500 hover:text-white'
                 }
                 hover:shadow-md active:scale-95
               `}
