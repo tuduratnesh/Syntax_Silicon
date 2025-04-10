@@ -19,7 +19,6 @@ import Graph from './Components/Graph.jsx'
 import Rightside from './Components/Rightside.jsx'
 import First from './Components/First.jsx'
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>

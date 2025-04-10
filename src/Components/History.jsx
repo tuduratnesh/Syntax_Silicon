@@ -20,7 +20,7 @@ const History = () => {
           <p className="font-semibold">{item.title}</p>
           {selectedHistory === item.id && (
             <p className="mt-2 text-white">{item.details}</p>
-          )}
+          )}+
         </div>
       ))}
     </div>
@@ -28,3 +28,4 @@ const History = () => {
 };
 
 export default History;
+
